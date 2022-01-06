@@ -1,42 +1,38 @@
 package com.demo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.demo.CaseConverter;
+
 public class CaseConverterTest {
+
 	CaseConverter c1 = new CaseConverter();
-	
-	@Test
-	public void testconvertcase() {
-		assertEquals(c1.convertcase("hello"), "HellO");
-		}
 
 	@Test
-	public void testconvertcase2() {
-		assertEquals(c1.convertcase("hello"), "Hello");
-		}
-	
-	
-	@Test
-	public void testconvertcase3() {
-		assertEquals(c1.convertcase(""), "");
-		}
-	
-	@Test
-	public void testconvertcase4() {
-		assertEquals(c1.convertcase(""), "");
-		}
-	
-	@Test
-	public void testconvertcase5() {
-		assertEquals(c1.convertcase("null"), "");
-		}
+	public void testConvertCase1() {
+		assertEquals(c1.convertCase("hello"), "HELLO");
+	}
 
 	@Test
-	public void testconvertcase6() {
-		assertEquals(c1.convertcase("7"), "7");
-		}
-	
-	
+	public void testConvertCase2() {
+		assertEquals(c1.convertCase("hello"), "HELLO");
+	}
+
+	@Test
+	public void testConvertCase3() {
+		assertEquals(c1.convertCase(""), "");
+	}
+
+	@Test
+	public void testConvertCase4() {
+		assertEquals(c1.convertCase(null), "");
+	}
+
+	@Test
+	public void testConvertCase5() {
+		assertEquals(c1.convertCase("7"), "7");
+	}
+
 }
